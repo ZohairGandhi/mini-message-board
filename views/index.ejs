@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Message Board</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Message Board</h1>
+      <p>Our Platform, Your Opinions</p>
+    </header>
+
+    <main>
+      <div class="content">
+        <h2>Messages</h2>
+
+        <div class="msgs">
+          <% messages.map(msg => { %>
+            <div class="msg">
+              <p class="msg-txt"><%= msg.text %></p>
+              <p>by <%= msg.user %> on <%= msg.added %></p>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </main>
+
+    <footer><p>Footer Placeholder</p></footer>
+  </body>
+</html>
