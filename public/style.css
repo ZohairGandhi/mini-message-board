@@ -57,6 +57,42 @@ main {
   font-weight: bold;
 }
 
+.new-msg-form,
+.lbl-input-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 50ch;
+}
+
+.lbl-input-pair {
+  gap: 8px;
+  font-weight: bold;
+
+  input,
+  textarea {
+    appearance: none;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 8px;
+  }
+}
+
+.new-msg-form button {
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  background-color: #007fff;
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+  opacity: 0.75;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 footer {
   background-color: #85b09a;
   text-align: center;
