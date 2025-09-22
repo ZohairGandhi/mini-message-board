@@ -14,19 +14,11 @@
     </header>
 
     <main>
-      <form action="/new" method="post" class="new-msg-form">
-        <label for="user" class="lbl-input-pair">
-          Name
-          <input type="text" name="user" id="user" required />
-        </label>
-
-        <label for="text" class="lbl-input-pair">
-          Message
-          <textarea name="text" id="text" rows="5" required></textarea>
-        </label>
-
-        <button>Submit</button>
-      </form>
+      <div>
+        <p><%= msg.text %></p>
+        <p><%= msg.user %></p>
+        <p><%= msg.added %></p>
+      </div>
     </main>
 
     <footer><p>Footer Placeholder</p></footer>

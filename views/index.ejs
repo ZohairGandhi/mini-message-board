@@ -10,20 +10,27 @@
   <body>
     <header>
       <h1>Message Board</h1>
-      <p>Our Platform, Your Opinions</p>
+      <p>Our Platform, Your Thoughts</p>
     </header>
 
     <main>
       <div class="content">
-        <h2>Messages</h2>
+        <div class="title-pair">
+          <h2>Messages</h2>
+          <a href="/new" class="new-msg-link">New Message</a>
+        </div>
 
         <div class="msgs">
-          <% messages.map(msg => { %>
-            <div class="msg">
-              <p class="msg-txt"><%= msg.text %></p>
-              <p>by <%= msg.user %> on <%= msg.added %></p>
+          <% for (let i = messages.length - 1; i >= 0; i-= 1) { %>
+            <div class="test">
+              <div class="msg">
+                <p class="msg-txt"><%= messages[i].text %></p>
+                <p>by <span class="bold-txt"><%= messages[i].user %></span> on <span class="bold-txt"><%= messages[i].added.toString().split(" ").slice(0, 5).join(" ") %></span></p>
+              </div>
+
+              <a href="/messages/<%= i %>">View Message</a>
             </div>
-          <% }) %>
+          <% } %>
         </div>
       </div>
     </main>
