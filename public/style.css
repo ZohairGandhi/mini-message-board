@@ -127,6 +127,12 @@ main {
   }
 }
 
+.bubble {
+  background-color: #f0f8ff;
+  padding: 8px 8px 16px 8px;
+  border-radius: 8px;
+}
+
 footer {
   background-color: #85b09a;
   text-align: center;

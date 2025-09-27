@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Message Board</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
 
   <body>
@@ -14,10 +14,19 @@
     </header>
 
     <main>
-      <div>
-        <p><%= msg.text %></p>
-        <p><%= msg.user %></p>
-        <p><%= msg.added %></p>
+      <div class="content">
+        <div class="msg bubble">
+          <p class="msg-txt">
+            <span class="bold-txt">Content:</span> <%= message.text %>
+          </p>
+          <p><span class="bold-txt">User:</span> <%= message.user %></p>
+          <p>
+            <span class="bold-txt">Added:</span> <%=
+            message.added.toString().split(" ").slice(0, 5).join(" ") %>
+          </p>
+        </div>
+
+        <a href="/" class="link-btn">Back to Index</a>
       </div>
     </main>
 
