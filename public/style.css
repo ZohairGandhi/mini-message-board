@@ -134,7 +134,19 @@ main {
 }
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
   background-color: #85b09a;
   text-align: center;
   padding: 16px;
+
+  & a {
+    transition: transform 250ms ease-in-out;
+  }
+
+  & a:hover {
+    transform: scale(1.25);
+  }
 }

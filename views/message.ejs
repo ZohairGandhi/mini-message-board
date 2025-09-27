@@ -1,35 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini Message Board</title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
+<%- include("partials/header", title) %>
 
-  <body>
-    <header>
-      <h1>Message Board</h1>
-      <p>Our Platform, Your Thoughts</p>
-    </header>
+<main>
+  <div class="content">
+    <div class="msg bubble">
+      <p class="msg-txt">
+        <span class="bold-txt">Content:</span> <%= message.text %>
+      </p>
+      <p><span class="bold-txt">User:</span> <%= message.user %></p>
+      <p>
+        <span class="bold-txt">Added:</span> <%=
+        message.added.toString().split(" ").slice(0, 5).join(" ") %>
+      </p>
+    </div>
 
-    <main>
-      <div class="content">
-        <div class="msg bubble">
-          <p class="msg-txt">
-            <span class="bold-txt">Content:</span> <%= message.text %>
-          </p>
-          <p><span class="bold-txt">User:</span> <%= message.user %></p>
-          <p>
-            <span class="bold-txt">Added:</span> <%=
-            message.added.toString().split(" ").slice(0, 5).join(" ") %>
-          </p>
-        </div>
+    <a href="/" class="link-btn">Back to Index</a>
+  </div>
+</main>
 
-        <a href="/" class="link-btn">Back to Index</a>
-      </div>
-    </main>
-
-    <footer><p>Footer Placeholder</p></footer>
-  </body>
-</html>
+<%- include("partials/footer") %>

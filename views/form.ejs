@@ -1,34 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini Message Board</title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
+<%- include("partials/header", title) %>
 
-  <body>
-    <header>
-      <h1>Message Board</h1>
-      <p>Our Platform, Your Thoughts</p>
-    </header>
+<main>
+  <form action="/new" method="post" class="new-msg-form">
+    <label for="user" class="lbl-input-pair">
+      Name
+      <input type="text" name="user" id="user" required />
+    </label>
 
-    <main>
-      <form action="/new" method="post" class="new-msg-form">
-        <label for="user" class="lbl-input-pair">
-          Name
-          <input type="text" name="user" id="user" required />
-        </label>
+    <label for="text" class="lbl-input-pair">
+      Message
+      <textarea name="text" id="text" rows="5" required></textarea>
+    </label>
 
-        <label for="text" class="lbl-input-pair">
-          Message
-          <textarea name="text" id="text" rows="5" required></textarea>
-        </label>
+    <button>Submit</button>
+  </form>
+</main>
 
-        <button>Submit</button>
-      </form>
-    </main>
-
-    <footer><p>Footer Placeholder</p></footer>
-  </body>
-</html>
+<%- include("partials/footer") %>
