@@ -45,7 +45,7 @@ main {
   justify-content: space-between;
 }
 
-.new-msg-link {
+.link-btn {
   background-color: #007fff;
   color: #fff;
   text-decoration: none;
@@ -65,7 +65,7 @@ main {
   gap: 16px;
 }
 
-.test {
+.msg-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,9 +78,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  /* padding: 8px 8px 16px 8px;
-  background-color: #f0f8ff;
-  border-radius: 8px; */
 }
 
 .msg-txt {

@@ -17,12 +17,12 @@
       <div class="content">
         <div class="title-pair">
           <h2>Messages</h2>
-          <a href="/new" class="new-msg-link">New Message</a>
+          <a href="/new" class="link-btn">New Message</a>
         </div>
 
         <div class="msgs">
           <% for (let i = messages.length - 1; i >= 0; i-= 1) { %>
-            <div class="test">
+            <div class="msg-container">
               <div class="msg">
                 <p class="msg-txt"><%= messages[i].text %></p>
                 <p>by <span class="bold-txt"><%= messages[i].user %></span> on <span class="bold-txt"><%= messages[i].added.toString().split(" ").slice(0, 5).join(" ") %></span></p>
