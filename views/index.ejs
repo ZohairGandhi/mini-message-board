@@ -12,10 +12,10 @@
             <div class="msg-container">
               <div class="msg">
                 <p class="msg-txt"><%= messages[i].text %></p>
-                <p>by <span class="bold-txt"><%= messages[i].user %></span> on <span class="bold-txt"><%= messages[i].added.toString().split(" ").slice(0, 5).join(" ") %></span></p>
+                <p>by <span class="bold-txt"><%= messages[i].username %></span> on <span class="bold-txt"><%= messages[i].added.toString().split(" ").slice(0, 5).join(" ") %></span></p>
               </div>
 
-              <a href="/messages/<%= i %>">View Message</a>
+              <a href="/messages/<%= i + 1 %>">View Message</a>
             </div>
           <% } %>
         </div>
