@@ -8,9 +8,7 @@ async function addMessage({ text, user: username, added }) {
 }
 
 async function getMessages() {
-  const { rows } = await pool.query(
-    "SELECT text, username, added FROM messages",
-  );
+  const { rows } = await pool.query("SELECT * FROM messages");
   return rows;
 }
 
